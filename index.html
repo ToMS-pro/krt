@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Jadwal KA Parcel</title>
   <style>
     body { font-family: sans-serif; padding: 20px; }
-    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    select, button { padding: 6px; margin: 5px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 15px; }
     th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
   </style>
 </head>
 <body>
-  <h1>Jadwal Kereta Parcel</h1>
-  <label>Pilih Rute:</label>
-  <select id="rute-select"></select>
+  <h1>Jadwal KA Parcel</h1>
 
-  <div id="jadwal-container"></div>
+  <label for="asal">Stasiun Asal:</label>
+  <select id="asal"></select>
+
+  <label for="tujuan">Stasiun Tujuan:</label>
+  <select id="tujuan"></select>
+
+  <button onclick="cariJadwal()">Cari Jadwal</button>
+
+  <div id="hasil"></div>
 
   <script>
+    let dataKereta = [];
+    let semuaStasiun = new Set();
+
     async function loadData() {
-      const res = await fetch("data.json");
-      const data = await res.json();
+      const res = await fetch('data.json');
+      dataKereta = await res.json();
 
-      const select = document.getElementById("rute-select");
-      const container = document.getElementById("jadwal-container");
-
-      data.forEach((kereta, index) => {
-        const option = document.createElement("option");
-        option.value = index;
-        option.textContent = `${kereta.nama} (${kereta.asal} → ${kereta.tujuan})`;
-        select.appendChild(option);
+      // Ambil semua nama stasiun
+      dataKereta.forEach(kereta => {
+        kereta.rute.forEach(r => semuaStasiun.add(r.stasiun));
       });
 
-      select.addEventListener("change", () => showJadwal(data[select.value]));
-
-      // Tampilkan jadwal pertama secara default
-      showJadwal(data[0]);
+      const asal = document.getElementById('asal');
+      const tujuan = document.getElementById('tujuan');
+      Array.from(semuaStasiun).sort().forEach(st => {
+        asal.innerHTML += `<option value="${st}">${st}</option>`;
+        tujuan.innerHTML += `<option value="${st}">${st}</option>`;
+      });
     }
 
-    function showJadwal(kereta) {
-      const html = `
-        <h2>${kereta.nama}</h2>
-        <p><strong>Rute:</strong> ${kereta.asal} → ${kereta.tujuan}</p>
-        <p><strong>Jam:</strong> ${kereta.jam}</p>
-        <table>
-          <tr><th>Stasiun</th><th>Datang</th><th>Berangkat</th></tr>
-          ${kereta.rute.map(r =>
-            `<tr><td>${r.stasiun}</td><td>${r.dat}</td><td>${r.ber}</td></tr>`
-          ).join("")}
-        </table>
-      `;
-      document.getElementById("jadwal-container").innerHTML = html;
+    function cariJadwal() {
+      const asal = document.getElementById('asal').value;
+      const tujuan = document.getElementById('tujuan').value;
+      const hasilDiv = document.getElementById('hasil');
+      hasilDiv.innerHTML = '';
+
+      const hasil = dataKereta.filter(kereta => {
+        const rute = kereta.rute.map(r => r.stasiun);
+        return rute.includes(asal) && rute.includes(tujuan) &&
+               rute.indexOf(asal) < rute.indexOf(tujuan);
+      });
+
+      if (hasil.length === 0) {
+        hasilDiv.innerHTML = '<p><strong>Tidak ada jadwal ditemukan.</strong></p>';
+        return;
+      }
+
+      hasilDiv.innerHTML = hasil.map(kereta => {
+        const rute = kereta.rute;
+        const jamBerangkat = rute.find(r => r.stasiun === asal)?.ber || '-';
+        const jamTiba = rute.find(r => r.stasiun === tujuan)?.dat || '-';
+        return `
+          <h2>${kereta.nama}</h2>
+          <p><strong>Rute:</strong> ${kereta.asal} → ${kereta.tujuan}</p>
+          <p><strong>Berangkat dari ${asal}:</strong> ${jamBerangkat}</p>
+          <p><strong>Tiba di ${tujuan}:</strong> ${jamTiba}</p>
+        `;
+      }).join('<hr>');
     }
 
     loadData();
