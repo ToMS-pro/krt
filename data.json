@@ -1,0 +1,38 @@
+[
+  {
+    "nama": "KA Parcel Utara 284",
+    "asal": "SURABAYA PASARTURI",
+    "tujuan": "JAKARTA GUDANG",
+    "jam": "21.30 – 09.34"
+  },
+  {
+    "nama": "KA Parcel Utara 283",
+    "asal": "JAKARTA GUDANG",
+    "tujuan": "SURABAYA PASARTURI",
+    "jam": "19.00 – 09.11"
+  },
+  {
+    "nama": "KA Parcel Selatan 286",
+    "asal": "BANDUNG",
+    "tujuan": "SURABAYA KOTA",
+    "jam": "18.25 – 08.23"
+  },
+  {
+    "nama": "KA Parcel Selatan 285",
+    "asal": "SURABAYA KOTA",
+    "tujuan": "BANDUNG",
+    "jam": "19.00 – 10.31"
+  },
+  {
+    "nama": "KA Parcel Tengah 282",
+    "asal": "KAMPUNGBANDAN",
+    "tujuan": "MALANG",
+    "jam": "17.40 – 12.01"
+  },
+  {
+    "nama": "KA Parcel Tengah 281",
+    "asal": "MALANG",
+    "tujuan": "JAKARTA GUDANG",
+    "jam": "16.30 – 10.02"
+  }
+]
