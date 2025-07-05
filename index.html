@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>Filter Jadwal KA Parcel</title>
+  <meta charset="UTF-8">
+  <title>Filter Kereta per Stasiun</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; }
-    select, table { margin-top: 10px; width: 100%; padding: 8px; }
+    select { width: 100%; padding: 8px; margin-top: 10px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
     th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    table { border-collapse: collapse; margin-top: 20px; }
   </style>
 </head>
 <body>
-  <h2>Filter Jadwal KA Parcel</h2>
+  <h2>Cari KA Berdasarkan Stasiun Awal & Tujuan</h2>
 
-  <label for="asalSelect">Pilih Kota Asal:</label>
-  <select id="asalSelect">
-    <option value="">-- Pilih Asal --</option>
+  <label>Pilih Stasiun Awal:</label>
+  <select id="stasiunAwal">
+    <option value="">-- Pilih Stasiun Awal --</option>
   </select>
 
-  <label for="tujuanSelect">Pilih Kota Tujuan:</label>
-  <select id="tujuanSelect" disabled>
-    <option value="">-- Pilih Tujuan --</option>
+  <label>Pilih Stasiun Tujuan:</label>
+  <select id="stasiunTujuan" disabled>
+    <option value="">-- Pilih Stasiun Tujuan --</option>
   </select>
 
-  <h3 id="judulKereta"></h3>
-  <table id="tabelRute" style="display: none;">
+  <table id="hasilTabel" style="display: none;">
     <thead>
       <tr>
-        <th>Stasiun</th>
-        <th>Datang</th>
-        <th>Berangkat</th>
+        <th>KA</th>
+        <th>Asal → Tujuan</th>
+        <th>Jam</th>
+        <th>Stasiun Awal (Dat/Ber)</th>
+        <th>Stasiun Tujuan (Dat/Ber)</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -38,73 +39,74 @@
   <script>
     let dataKereta = [];
 
-    // Ambil data dari data.json
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
         dataKereta = data;
-        isiAsal();
+        isiDropdownStasiun();
       });
 
-    const asalSelect = document.getElementById('asalSelect');
-    const tujuanSelect = document.getElementById('tujuanSelect');
-    const judul = document.getElementById('judulKereta');
-    const table = document.getElementById('tabelRute');
-    const tbody = table.querySelector('tbody');
+    const awal = document.getElementById('stasiunAwal');
+    const tujuan = document.getElementById('stasiunTujuan');
+    const tabel = document.getElementById('hasilTabel');
+    const tbody = tabel.querySelector('tbody');
 
-    function isiAsal() {
-      const asalUnik = [...new Set(dataKereta.map(ka => ka.asal))];
-      asalUnik.forEach(kota => {
+    function isiDropdownStasiun() {
+      const semuaStasiun = new Set();
+      dataKereta.forEach(ka => {
+        ka.rute.forEach(r => semuaStasiun.add(r.stasiun));
+      });
+
+      const list = Array.from(semuaStasiun).sort();
+      list.forEach(nama => {
         const opt = document.createElement('option');
-        opt.value = kota;
-        opt.textContent = kota;
-        asalSelect.appendChild(opt);
+        opt.value = nama;
+        opt.textContent = nama;
+        awal.appendChild(opt.cloneNode(true));
+        tujuan.appendChild(opt.cloneNode(true));
       });
     }
 
-    asalSelect.addEventListener('change', function () {
-      const asal = this.value;
-      tujuanSelect.innerHTML = '<option value="">-- Pilih Tujuan --</option>';
-      tujuanSelect.disabled = true;
-      judul.textContent = "";
-      tbody.innerHTML = "";
-      table.style.display = "none";
-
-      if (asal === "") return;
-
-      const tujuanUnik = [...new Set(
-        dataKereta.filter(ka => ka.asal === asal).map(ka => ka.tujuan)
-      )];
-
-      tujuanUnik.forEach(tujuan => {
-        const opt = document.createElement('option');
-        opt.value = tujuan;
-        opt.textContent = tujuan;
-        tujuanSelect.appendChild(opt);
-      });
-
-      tujuanSelect.disabled = false;
+    awal.addEventListener('change', () => {
+      tujuan.disabled = awal.value === "";
     });
 
-    tujuanSelect.addEventListener('change', function () {
-      const asal = asalSelect.value;
-      const tujuan = this.value;
-      const hasil = dataKereta.filter(ka => ka.asal === asal && ka.tujuan === tujuan);
+    tujuan.addEventListener('change', () => {
+      const asal = awal.value;
+      const tujuanSt = tujuan.value;
+
+      tbody.innerHTML = "";
+      tabel.style.display = "none";
+      if (asal === "" || tujuanSt === "") return;
+
+      const hasil = dataKereta.filter(ka => {
+        const rute = ka.rute.map(r => r.stasiun);
+        const idxAwal = rute.indexOf(asal);
+        const idxTujuan = rute.indexOf(tujuanSt);
+        return idxAwal !== -1 && idxTujuan !== -1 && idxAwal < idxTujuan;
+      });
 
       if (hasil.length === 0) {
-        judul.textContent = "Tidak ada jadwal kereta untuk rute ini.";
-        table.style.display = "none";
+        tbody.innerHTML = `<tr><td colspan="5">Tidak ada KA yang cocok.</td></tr>`;
+        tabel.style.display = "table";
         return;
       }
 
-      judul.textContent = `${hasil[0].nama} (${asal} → ${tujuan}) - ${hasil[0].jam}`;
-      tbody.innerHTML = "";
-      hasil[0].rute.forEach(r => {
+      hasil.forEach(ka => {
+        const rAwal = ka.rute.find(r => r.stasiun === asal);
+        const rTujuan = ka.rute.find(r => r.stasiun === tujuanSt);
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td>${r.stasiun}</td><td>${r.dat}</td><td>${r.ber}</td>`;
+        tr.innerHTML = `
+          <td>${ka.nama}</td>
+          <td>${ka.asal} → ${ka.tujuan}</td>
+          <td>${ka.jam}</td>
+          <td>${rAwal.dat} / ${rAwal.ber}</td>
+          <td>${rTujuan.dat} / ${rTujuan.ber}</td>
+        `;
         tbody.appendChild(tr);
       });
-      table.style.display = "table";
+
+      tabel.style.display = "table";
     });
   </script>
 </body>
