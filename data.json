@@ -3,36 +3,42 @@
     "nama": "KA Parcel Utara 284",
     "asal": "SURABAYA PASARTURI",
     "tujuan": "JAKARTA GUDANG",
-    "jam": "21.30 – 09.34"
+    "jam": "21.30 – 09.34",
+    "rute": [
+      { "stasiun": "SURABAYA PASARTURI", "dat": "-", "ber": "21.30" },
+      { "stasiun": "BABAT", "dat": "22.23", "ber": "22.28" },
+      { "stasiun": "BOJONEGORO", "dat": "22.56", "ber": "23.01" },
+      { "stasiun": "CEPU", "dat": "23.29", "ber": "23.37" },
+      { "stasiun": "NGROMBO", "dat": "00.35", "ber": "00.40" },
+      { "stasiun": "SEMARANG TAWANG", "dat": "01.25", "ber": "01.55" },
+      { "stasiun": "PEKALONGAN", "dat": "03.05", "ber": "03.15" },
+      { "stasiun": "TEGAL", "dat": "04.00", "ber": "04.10" },
+      { "stasiun": "CIREBON PRUJAKAN", "dat": "05.06", "ber": "05.28" },
+      { "stasiun": "JATIBARANG", "dat": "06.05", "ber": "06.22" },
+      { "stasiun": "PEGADENBARU", "dat": "07.06", "ber": "07.22" },
+      { "stasiun": "CIKAMPEK", "dat": "07.55", "ber": "08.02" },
+      { "stasiun": "JAKARTA GUDANG", "dat": "09.34", "ber": "-" }
+    ]
   },
   {
     "nama": "KA Parcel Utara 283",
     "asal": "JAKARTA GUDANG",
     "tujuan": "SURABAYA PASARTURI",
-    "jam": "19.00 – 09.11"
-  },
-  {
-    "nama": "KA Parcel Selatan 286",
-    "asal": "BANDUNG",
-    "tujuan": "SURABAYA KOTA",
-    "jam": "18.25 – 08.23"
-  },
-  {
-    "nama": "KA Parcel Selatan 285",
-    "asal": "SURABAYA KOTA",
-    "tujuan": "BANDUNG",
-    "jam": "19.00 – 10.31"
-  },
-  {
-    "nama": "KA Parcel Tengah 282",
-    "asal": "KAMPUNGBANDAN",
-    "tujuan": "MALANG",
-    "jam": "17.40 – 12.01"
-  },
-  {
-    "nama": "KA Parcel Tengah 281",
-    "asal": "MALANG",
-    "tujuan": "JAKARTA GUDANG",
-    "jam": "16.30 – 10.02"
+    "jam": "19.00 – 09.11",
+    "rute": [
+      { "stasiun": "JAKARTA GUDANG", "dat": "-", "ber": "19.00" },
+      { "stasiun": "CIKAMPEK", "dat": "20.25", "ber": "20.42" },
+      { "stasiun": "PEGADENBARU", "dat": "21.35", "ber": "21.58" },
+      { "stasiun": "JATIBARANG", "dat": "23.08", "ber": "23.34" },
+      { "stasiun": "CIREBON PRUJAKAN", "dat": "00.11", "ber": "00.26" },
+      { "stasiun": "TEGAL", "dat": "01.20", "ber": "01.30" },
+      { "stasiun": "PEKALONGAN", "dat": "02.14", "ber": "02.24" },
+      { "stasiun": "SEMARANG TAWANG", "dat": "03.34", "ber": "04.47" },
+      { "stasiun": "NGROMBO", "dat": "05.33", "ber": "05.38" },
+      { "stasiun": "CEPU", "dat": "06.40", "ber": "07.00" },
+      { "stasiun": "BOJONEGORO", "dat": "07.30", "ber": "07.35" },
+      { "stasiun": "BABAT", "dat": "08.07", "ber": "08.12" },
+      { "stasiun": "SURABAYA PASARTURI", "dat": "09.11", "ber": "-" }
+    ]
   }
 ]
