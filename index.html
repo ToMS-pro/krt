@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Rute KA Parcel & Bagasi</title>
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Jadwal KA Parcel</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+  </style>
 </head>
 <body>
-  <h2>Cek Rute Pengiriman KA Parcel & Bagasi</h2>
+  <h1>Jadwal Kereta Parcel</h1>
+  <label>Pilih Rute:</label>
+  <select id="rute-select"></select>
 
-  <label>Stasiun Asal:</label>
-  <select id="asal"></select>
+  <div id="jadwal-container"></div>
 
-  <label>Stasiun Tujuan:</label>
-  <select id="tujuan"></select>
+  <script>
+    async function loadData() {
+      const res = await fetch("data.json");
+      const data = await res.json();
 
-  <button onclick="cariRute()">Cari Rute</button>
+      const select = document.getElementById("rute-select");
+      const container = document.getElementById("jadwal-container");
 
-  <div id="hasil"></div>
+      data.forEach((kereta, index) => {
+        const option = document.createElement("option");
+        option.value = index;
+        option.textContent = `${kereta.nama} (${kereta.asal} → ${kereta.tujuan})`;
+        select.appendChild(option);
+      });
+
+      select.addEventListener("change", () => showJadwal(data[select.value]));
+
+      // Tampilkan jadwal pertama secara default
+      showJadwal(data[0]);
+    }
+
+    function showJadwal(kereta) {
+      const html = `
+        <h2>${kereta.nama}</h2>
+        <p><strong>Rute:</strong> ${kereta.asal} → ${kereta.tujuan}</p>
+        <p><strong>Jam:</strong> ${kereta.jam}</p>
+        <table>
+          <tr><th>Stasiun</th><th>Datang</th><th>Berangkat</th></tr>
+          ${kereta.rute.map(r =>
+            `<tr><td>${r.stasiun}</td><td>${r.dat}</td><td>${r.ber}</td></tr>`
+          ).join("")}
+        </table>
+      `;
+      document.getElementById("jadwal-container").innerHTML = html;
+    }
+
+    loadData();
+  </script>
 </body>
 </html>
