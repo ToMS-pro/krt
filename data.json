@@ -1,280 +1,1072 @@
 [
-  {
-    "nama": "KA Parcel Utara 284",
-    "asal": "SURABAYA PASARTURI",
-    "tujuan": "JAKARTA GUDANG",
-    "jam": "21.30 – 09.34",
-    "rute": [
-      { "stasiun": "SURABAYA PASARTURI", "dat": "-", "ber": "21.30" },
-      { "stasiun": "BABAT", "dat": "22.23", "ber": "22.28" },
-      { "stasiun": "BOJONEGORO", "dat": "22.56", "ber": "23.01" },
-      { "stasiun": "CEPU", "dat": "23.29", "ber": "23.37" },
-      { "stasiun": "NGROMBO", "dat": "00.35", "ber": "00.40" },
-      { "stasiun": "SEMARANG TAWANG", "dat": "01.25", "ber": "01.55" },
-      { "stasiun": "PEKALONGAN", "dat": "03.05", "ber": "03.15" },
-      { "stasiun": "TEGAL", "dat": "04.00", "ber": "04.10" },
-      { "stasiun": "CIREBON PRUJAKAN", "dat": "05.06", "ber": "05.28" },
-      { "stasiun": "JATIBARANG", "dat": "06.05", "ber": "06.22" },
-      { "stasiun": "PEGADENBARU", "dat": "07.06", "ber": "07.22" },
-      { "stasiun": "CIKAMPEK", "dat": "07.55", "ber": "08.02" },
-      { "stasiun": "JAKARTA GUDANG", "dat": "09.34", "ber": "-" }
-    ]
-  },
-  {
-    "nama": "KA Parcel Utara 283",
-    "asal": "JAKARTA GUDANG",
-    "tujuan": "SURABAYA PASARTURI",
-    "jam": "19.00 – 09.11",
-    "rute": [
-      { "stasiun": "JAKARTA GUDANG", "dat": "-", "ber": "19.00" },
-      { "stasiun": "CIKAMPEK", "dat": "20.25", "ber": "20.42" },
-      { "stasiun": "PEGADENBARU", "dat": "21.35", "ber": "21.58" },
-      { "stasiun": "JATIBARANG", "dat": "23.08", "ber": "23.34" },
-      { "stasiun": "CIREBON PRUJAKAN", "dat": "00.11", "ber": "00.26" },
-      { "stasiun": "TEGAL", "dat": "01.20", "ber": "01.30" },
-      { "stasiun": "PEKALONGAN", "dat": "02.14", "ber": "02.24" },
-      { "stasiun": "SEMARANG TAWANG", "dat": "03.34", "ber": "04.47" },
-      { "stasiun": "NGROMBO", "dat": "05.33", "ber": "05.38" },
-      { "stasiun": "CEPU", "dat": "06.40", "ber": "07.00" },
-      { "stasiun": "BOJONEGORO", "dat": "07.30", "ber": "07.35" },
-      { "stasiun": "BABAT", "dat": "08.07", "ber": "08.12" },
-      { "stasiun": "SURABAYA PASARTURI", "dat": "09.11", "ber": "-" }
-    ]
-  }
+    {
+        "nama": "KA Parcel Utara 284",
+        "asal": "SURABAYA PASARTURI",
+        "tujuan": "JAKARTA GUDANG",
+        "jam": "21.30 – 09.34",
+        "rute": [
+            {
+                "stasiun": "SURABAYA PASARTURI",
+                "dat": "-",
+                "ber": "21.30"
+            },
+            {
+                "stasiun": "BABAT",
+                "dat": "22.23",
+                "ber": "22.28"
+            },
+            {
+                "stasiun": "BOJONEGORO",
+                "dat": "22.56",
+                "ber": "23.01"
+            },
+            {
+                "stasiun": "CEPU",
+                "dat": "23.29",
+                "ber": "23.37"
+            },
+            {
+                "stasiun": "NGROMBO",
+                "dat": "00.35",
+                "ber": "00.40"
+            },
+            {
+                "stasiun": "SEMARANG TAWANG",
+                "dat": "01.25",
+                "ber": "01.55"
+            },
+            {
+                "stasiun": "PEKALONGAN",
+                "dat": "03.05",
+                "ber": "03.15"
+            },
+            {
+                "stasiun": "TEGAL",
+                "dat": "04.00",
+                "ber": "04.10"
+            },
+            {
+                "stasiun": "CIREBON PRUJAKAN",
+                "dat": "05.06",
+                "ber": "05.28"
+            },
+            {
+                "stasiun": "JATIBARANG",
+                "dat": "06.05",
+                "ber": "06.22"
+            },
+            {
+                "stasiun": "PEGADENBARU",
+                "dat": "07.06",
+                "ber": "07.22"
+            },
+            {
+                "stasiun": "CIKAMPEK",
+                "dat": "07.55",
+                "ber": "08.02"
+            },
+            {
+                "stasiun": "JAKARTA GUDANG",
+                "dat": "09.34",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Parcel Utara 283",
+        "asal": "JAKARTA GUDANG",
+        "tujuan": "SURABAYA PASARTURI",
+        "jam": "19.00 – 09.11",
+        "rute": [
+            {
+                "stasiun": "JAKARTA GUDANG",
+                "dat": "-",
+                "ber": "19.00"
+            },
+            {
+                "stasiun": "CIKAMPEK",
+                "dat": "20.25",
+                "ber": "20.42"
+            },
+            {
+                "stasiun": "PEGADENBARU",
+                "dat": "21.35",
+                "ber": "21.58"
+            },
+            {
+                "stasiun": "JATIBARANG",
+                "dat": "23.08",
+                "ber": "23.34"
+            },
+            {
+                "stasiun": "CIREBON PRUJAKAN",
+                "dat": "00.11",
+                "ber": "00.26"
+            },
+            {
+                "stasiun": "TEGAL",
+                "dat": "01.20",
+                "ber": "01.30"
+            },
+            {
+                "stasiun": "PEKALONGAN",
+                "dat": "02.14",
+                "ber": "02.24"
+            },
+            {
+                "stasiun": "SEMARANG TAWANG",
+                "dat": "03.34",
+                "ber": "04.47"
+            },
+            {
+                "stasiun": "NGROMBO",
+                "dat": "05.33",
+                "ber": "05.38"
+            },
+            {
+                "stasiun": "CEPU",
+                "dat": "06.40",
+                "ber": "07.00"
+            },
+            {
+                "stasiun": "BOJONEGORO",
+                "dat": "07.30",
+                "ber": "07.35"
+            },
+            {
+                "stasiun": "BABAT",
+                "dat": "08.07",
+                "ber": "08.12"
+            },
+            {
+                "stasiun": "SURABAYA PASARTURI",
+                "dat": "09.11",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Parcel Selatan 286",
+        "asal": "BANDUNG",
+        "tujuan": "SURABAYA KOTA",
+        "jam": "18.25 – 08.23",
+        "rute": [
+            {
+                "stasiun": "BANDUNG",
+                "dat": "-",
+                "ber": "18.25"
+            },
+            {
+                "stasiun": "KIARACONDONG",
+                "dat": "18.35",
+                "ber": "18.45"
+            },
+            {
+                "stasiun": "LELES",
+                "dat": "19.35",
+                "ber": "19.40"
+            },
+            {
+                "stasiun": "CIPENDEUY",
+                "dat": "20.31",
+                "ber": "20.41"
+            },
+            {
+                "stasiun": "TASIKMALAYA",
+                "dat": "21.22",
+                "ber": "21.27"
+            },
+            {
+                "stasiun": "BANJAR",
+                "dat": "22.06",
+                "ber": "22.11"
+            },
+            {
+                "stasiun": "SIDAREJA",
+                "dat": "22.37",
+                "ber": "22.42"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "23.33",
+                "ber": "00.13"
+            },
+            {
+                "stasiun": "GOMBONG",
+                "dat": "00.36",
+                "ber": "00.41"
+            },
+            {
+                "stasiun": "KEBUMEN",
+                "dat": "00.58",
+                "ber": "01.03"
+            },
+            {
+                "stasiun": "KUTOARJO",
+                "dat": "01.26",
+                "ber": "01.31"
+            },
+            {
+                "stasiun": "WATES",
+                "dat": "01.57",
+                "ber": "02.01"
+            },
+            {
+                "stasiun": "LEMPUYANGAN",
+                "dat": "02.27",
+                "ber": "03.00"
+            },
+            {
+                "stasiun": "KLATEN",
+                "dat": "03.22",
+                "ber": "03.27"
+            },
+            {
+                "stasiun": "PURWOSARI",
+                "dat": "03.49",
+                "ber": "03.59"
+            },
+            {
+                "stasiun": "SRAGEN",
+                "dat": "04.27",
+                "ber": "04.32"
+            },
+            {
+                "stasiun": "MADIUN",
+                "dat": "05.25",
+                "ber": "05.33"
+            },
+            {
+                "stasiun": "NGANJUK",
+                "dat": "06.12",
+                "ber": "06.17"
+            },
+            {
+                "stasiun": "KERTOSONO",
+                "dat": "06.36",
+                "ber": "06.45"
+            },
+            {
+                "stasiun": "JOMBANG",
+                "dat": "07.00",
+                "ber": "07.06"
+            },
+            {
+                "stasiun": "MOJOKERTO",
+                "dat": "07.28",
+                "ber": "07.38"
+            },
+            {
+                "stasiun": "SURABAYA KOTA",
+                "dat": "08.23",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Parcel Selatan 285",
+        "asal": "SURABAYA KOTA",
+        "tujuan": "BANDUNG",
+        "jam": "19.00 – 10.31",
+        "rute": [
+            {
+                "stasiun": "SURABAYA KOTA",
+                "dat": "-",
+                "ber": "19.00"
+            },
+            {
+                "stasiun": "MOJOKERTO",
+                "dat": "20.03",
+                "ber": "20.18"
+            },
+            {
+                "stasiun": "JOMBANG",
+                "dat": "20.40",
+                "ber": "21.01"
+            },
+            {
+                "stasiun": "KERTOSONO",
+                "dat": "21.16",
+                "ber": "21.22"
+            },
+            {
+                "stasiun": "NGANJUK",
+                "dat": "21.41",
+                "ber": "21.46"
+            },
+            {
+                "stasiun": "MADIUN",
+                "dat": "22.25",
+                "ber": "22.33"
+            },
+            {
+                "stasiun": "SRAGEN",
+                "dat": "23.26",
+                "ber": "23.31"
+            },
+            {
+                "stasiun": "PURWOSARI",
+                "dat": "23.59",
+                "ber": "00.09"
+            },
+            {
+                "stasiun": "KLATEN",
+                "dat": "00.30",
+                "ber": "00.37"
+            },
+            {
+                "stasiun": "LEMPUYANGAN",
+                "dat": "01.03",
+                "ber": "01.15"
+            },
+            {
+                "stasiun": "WATES",
+                "dat": "01.41",
+                "ber": "01.45"
+            },
+            {
+                "stasiun": "KUTOARJO",
+                "dat": "02.12",
+                "ber": "02.22"
+            },
+            {
+                "stasiun": "KEBUMEN",
+                "dat": "02.45",
+                "ber": "02.52"
+            },
+            {
+                "stasiun": "GOMBONG",
+                "dat": "03.28",
+                "ber": "03.33"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "03.59",
+                "ber": "04.14"
+            },
+            {
+                "stasiun": "SIDAREJA",
+                "dat": "05.14",
+                "ber": "05.19"
+            },
+            {
+                "stasiun": "BANJAR",
+                "dat": "05.47",
+                "ber": "05.52"
+            },
+            {
+                "stasiun": "TASIKMALAYA",
+                "dat": "06.38",
+                "ber": "06.48"
+            },
+            {
+                "stasiun": "CIPENDEUY",
+                "dat": "07.33",
+                "ber": "07.43"
+            },
+            {
+                "stasiun": "LELES",
+                "dat": "09.08",
+                "ber": "09.16"
+            },
+            {
+                "stasiun": "KIARACONDONG",
+                "dat": "10.10",
+                "ber": "10.21"
+            },
+            {
+                "stasiun": "BANDUNG",
+                "dat": "10.31",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Parcel Tengah 282",
+        "asal": "KAMPUNGBANDAN",
+        "tujuan": "MALANG",
+        "jam": "17.40 – 12.01",
+        "rute": [
+            {
+                "stasiun": "KAMPUNGBANDAN",
+                "dat": "-",
+                "ber": "17.40"
+            },
+            {
+                "stasiun": "CIKAMPEK",
+                "dat": "18.56",
+                "ber": "19.01"
+            },
+            {
+                "stasiun": "PEGADEN BARU",
+                "dat": "19.32",
+                "ber": "19.53"
+            },
+            {
+                "stasiun": "JATIBARANG",
+                "dat": "20.34",
+                "ber": "20.59"
+            },
+            {
+                "stasiun": "CIREBON PERUJAKAN",
+                "dat": "21.36",
+                "ber": "21.56"
+            },
+            {
+                "stasiun": "PURWOKERTO",
+                "dat": "23.45",
+                "ber": "23.55"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "00.18",
+                "ber": "00.33"
+            },
+            {
+                "stasiun": "GOMBONG",
+                "dat": "00.55",
+                "ber": "01.00"
+            },
+            {
+                "stasiun": "KEBUMEN",
+                "dat": "01.17",
+                "ber": "01.33"
+            },
+            {
+                "stasiun": "KUTOARJO",
+                "dat": "01.56",
+                "ber": "02.15"
+            },
+            {
+                "stasiun": "WATES",
+                "dat": "02.42",
+                "ber": "02.47"
+            },
+            {
+                "stasiun": "LEMPUYANGAN",
+                "dat": "03.13",
+                "ber": "03.32"
+            },
+            {
+                "stasiun": "KLATEN",
+                "dat": "03.53",
+                "ber": "03.57"
+            },
+            {
+                "stasiun": "PURWOSARI",
+                "dat": "04.18",
+                "ber": "04.30"
+            },
+            {
+                "stasiun": "SRAGEN",
+                "dat": "04.57",
+                "ber": "05.20"
+            },
+            {
+                "stasiun": "NGAWI",
+                "dat": "05.56",
+                "ber": "06.01"
+            },
+            {
+                "stasiun": "MADIUN",
+                "dat": "06.24",
+                "ber": "06.33"
+            },
+            {
+                "stasiun": "NGANJUK",
+                "dat": "07.11",
+                "ber": "07.17"
+            },
+            {
+                "stasiun": "KERTOSONO",
+                "dat": "07.37",
+                "ber": "07.50"
+            },
+            {
+                "stasiun": "KEDIRI",
+                "dat": "08.27",
+                "ber": "08.34"
+            },
+            {
+                "stasiun": "TULUNGAGUNG",
+                "dat": "09.00",
+                "ber": "09.07"
+            },
+            {
+                "stasiun": "BLITAR",
+                "dat": "09.48",
+                "ber": "09.54"
+            },
+            {
+                "stasiun": "WLINGI",
+                "dat": "10.27",
+                "ber": "10.37"
+            },
+            {
+                "stasiun": "KEPANJEN",
+                "dat": "11.30",
+                "ber": "11.35"
+            },
+            {
+                "stasiun": "MALANG",
+                "dat": "12.01",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Parcel Tengah 281",
+        "asal": "MALANG",
+        "tujuan": "JAKARTA GUDANG",
+        "jam": "16.30 – 10.02",
+        "rute": [
+            {
+                "stasiun": "MALANG",
+                "dat": "-",
+                "ber": "16.30"
+            },
+            {
+                "stasiun": "KEPANJEN",
+                "dat": "16.53",
+                "ber": "16.58"
+            },
+            {
+                "stasiun": "WLINGI",
+                "dat": "17.37",
+                "ber": "17.46"
+            },
+            {
+                "stasiun": "BLITAR",
+                "dat": "18.07",
+                "ber": "18.13"
+            },
+            {
+                "stasiun": "TULUNGAGUNG",
+                "dat": "19.01",
+                "ber": "19.06"
+            },
+            {
+                "stasiun": "KEDIRI",
+                "dat": "19.41",
+                "ber": "19.47"
+            },
+            {
+                "stasiun": "KERTOSONO",
+                "dat": "20.46",
+                "ber": "20.53"
+            },
+            {
+                "stasiun": "NGANJUK",
+                "dat": "21.13",
+                "ber": "21.33"
+            },
+            {
+                "stasiun": "MADIUN",
+                "dat": "22.08",
+                "ber": "22.15"
+            },
+            {
+                "stasiun": "NGAWI",
+                "dat": "22.37",
+                "ber": "22.40"
+            },
+            {
+                "stasiun": "SRAGEN",
+                "dat": "23.13",
+                "ber": "23.18"
+            },
+            {
+                "stasiun": "PURWOSARI",
+                "dat": "23.47",
+                "ber": "23.54"
+            },
+            {
+                "stasiun": "KLATEN",
+                "dat": "00.14",
+                "ber": "00.18"
+            },
+            {
+                "stasiun": "LEMPUYANGAN",
+                "dat": "00.39",
+                "ber": "00.54"
+            },
+            {
+                "stasiun": "WATES",
+                "dat": "01.20",
+                "ber": "01.24"
+            },
+            {
+                "stasiun": "KUTOARJO",
+                "dat": "01.50",
+                "ber": "02.00"
+            },
+            {
+                "stasiun": "KEBUMEN",
+                "dat": "02.22",
+                "ber": "02.27"
+            },
+            {
+                "stasiun": "GOMBONG",
+                "dat": "02.43",
+                "ber": "02.48"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "03.11",
+                "ber": "03.25"
+            },
+            {
+                "stasiun": "PURWOKERTO",
+                "dat": "03.48",
+                "ber": "05.39"
+            },
+            {
+                "stasiun": "CIREBON PERUJAKAN",
+                "dat": "05.51",
+                "ber": "06.11"
+            },
+            {
+                "stasiun": "JATIBARANG",
+                "dat": "06.47",
+                "ber": "07.01"
+            },
+            {
+                "stasiun": "PEGADEN BARU",
+                "dat": "07.46",
+                "ber": "07.51"
+            },
+            {
+                "stasiun": "CIKAMPEK",
+                "dat": "08.23",
+                "ber": "08.39"
+            },
+            {
+                "stasiun": "JAKARTA GUDANG",
+                "dat": "10.02",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Wijayakusuma 118–119",
+        "asal": "KETAPANG",
+        "tujuan": "CILACAP",
+        "jam": "11.00 – 01.11",
+        "rute": [
+            {
+                "stasiun": "KETAPANG",
+                "dat": "-",
+                "ber": "11.00"
+            },
+            {
+                "stasiun": "BANYUWANGI KOTA",
+                "dat": "11.13",
+                "ber": "11.15"
+            },
+            {
+                "stasiun": "ROGOJAMPI",
+                "dat": "11.27",
+                "ber": "11.29"
+            },
+            {
+                "stasiun": "KALISETAIL",
+                "dat": "11.48",
+                "ber": "11.50"
+            },
+            {
+                "stasiun": "JEMBER",
+                "dat": "13.13",
+                "ber": "13.18"
+            },
+            {
+                "stasiun": "RAMBIPUJI",
+                "dat": "13.28",
+                "ber": "13.30"
+            },
+            {
+                "stasiun": "TANGGUL",
+                "dat": "13.45",
+                "ber": "13.47"
+            },
+            {
+                "stasiun": "KLAKAH",
+                "dat": "14.15",
+                "ber": "14.17"
+            },
+            {
+                "stasiun": "PROBOLINGGO",
+                "dat": "14.49",
+                "ber": "14.54"
+            },
+            {
+                "stasiun": "PASURUAN",
+                "dat": "15.25",
+                "ber": "15.27"
+            },
+            {
+                "stasiun": "BANGIL",
+                "dat": "15.45",
+                "ber": "15.52"
+            },
+            {
+                "stasiun": "SIDOARJO",
+                "dat": "16.17",
+                "ber": "16.21"
+            },
+            {
+                "stasiun": "SURABAYA GUBENG",
+                "dat": "16.53",
+                "ber": "17.20"
+            },
+            {
+                "stasiun": "MOJOKERTO",
+                "dat": "17.56",
+                "ber": "17.58"
+            },
+            {
+                "stasiun": "JOMBANG",
+                "dat": "18.18",
+                "ber": "18.20"
+            },
+            {
+                "stasiun": "KERTOSONO",
+                "dat": "18.34",
+                "ber": "18.36"
+            },
+            {
+                "stasiun": "NGANJUK",
+                "dat": "18.55",
+                "ber": "18.57"
+            },
+            {
+                "stasiun": "MADIUN",
+                "dat": "19.33",
+                "ber": "19.38"
+            },
+            {
+                "stasiun": "NGAWI",
+                "dat": "20.01",
+                "ber": "20.18"
+            },
+            {
+                "stasiun": "SRAGEN",
+                "dat": "20.51",
+                "ber": "20.53"
+            },
+            {
+                "stasiun": "SOLO BALAPAN",
+                "dat": "21.16",
+                "ber": "21.19"
+            },
+            {
+                "stasiun": "KLATEN",
+                "dat": "21.42",
+                "ber": "21.56"
+            },
+            {
+                "stasiun": "YOGYAKARTA",
+                "dat": "22.20",
+                "ber": "22.25"
+            },
+            {
+                "stasiun": "WATES",
+                "dat": "22.49",
+                "ber": "22.51"
+            },
+            {
+                "stasiun": "KUTOARJO",
+                "dat": "23.17",
+                "ber": "23.20"
+            },
+            {
+                "stasiun": "KEBUMEN",
+                "dat": "23.41",
+                "ber": "23.43"
+            },
+            {
+                "stasiun": "GOMBONG",
+                "dat": "23.59",
+                "ber": "00.01"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "00.23",
+                "ber": "00.25"
+            },
+            {
+                "stasiun": "MAOS",
+                "dat": "00.44",
+                "ber": "00.46"
+            },
+            {
+                "stasiun": "CILACAP",
+                "dat": "01.11",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Wijayakusuma 120–117",
+        "asal": "CILACAP",
+        "tujuan": "KETAPANG",
+        "jam": "15.20 – 05.40",
+        "rute": [
+            {
+                "stasiun": "CILACAP",
+                "dat": "-",
+                "ber": "15.20"
+            },
+            {
+                "stasiun": "MAOS",
+                "dat": "15.52",
+                "ber": "15.54"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "16.07",
+                "ber": "16.10"
+            },
+            {
+                "stasiun": "GOMBONG",
+                "dat": "16.38",
+                "ber": "16.40"
+            },
+            {
+                "stasiun": "KEBUMEN",
+                "dat": "17.02",
+                "ber": "17.04"
+            },
+            {
+                "stasiun": "KUTOARJO",
+                "dat": "17.27",
+                "ber": "17.32"
+            },
+            {
+                "stasiun": "WATES",
+                "dat": "17.58",
+                "ber": "18.00"
+            },
+            {
+                "stasiun": "YOGYAKARTA",
+                "dat": "18.23",
+                "ber": "18.31"
+            },
+            {
+                "stasiun": "KLATEN",
+                "dat": "18.56",
+                "ber": "18.58"
+            },
+            {
+                "stasiun": "SOLO BALAPAN",
+                "dat": "19.24",
+                "ber": "19.28"
+            },
+            {
+                "stasiun": "SRAGEN",
+                "dat": "19.51",
+                "ber": "19.53"
+            },
+            {
+                "stasiun": "NGAWI",
+                "dat": "20.24",
+                "ber": "20.26"
+            },
+            {
+                "stasiun": "MADIUN",
+                "dat": "20.48",
+                "ber": "20.53"
+            },
+            {
+                "stasiun": "NGANJUK",
+                "dat": "21.29",
+                "ber": "21.31"
+            },
+            {
+                "stasiun": "KERTOSONO",
+                "dat": "21.51",
+                "ber": "21.54"
+            },
+            {
+                "stasiun": "JOMBANG",
+                "dat": "22.08",
+                "ber": "22.11"
+            },
+            {
+                "stasiun": "MOJOKERTO",
+                "dat": "22.33",
+                "ber": "22.35"
+            },
+            {
+                "stasiun": "SURABAYA GUBENG",
+                "dat": "23.18",
+                "ber": "23.48"
+            },
+            {
+                "stasiun": "SIDOARJO",
+                "dat": "00.17",
+                "ber": "00.20"
+            },
+            {
+                "stasiun": "BANGIL",
+                "dat": "00.44",
+                "ber": "00.53"
+            },
+            {
+                "stasiun": "PASURUAN",
+                "dat": "01.11",
+                "ber": "01.13"
+            },
+            {
+                "stasiun": "PROBOLINGGO",
+                "dat": "01.45",
+                "ber": "01.55"
+            },
+            {
+                "stasiun": "KLAKAH",
+                "dat": "02.25",
+                "ber": "02.27"
+            },
+            {
+                "stasiun": "TANGGUL",
+                "dat": "02.55",
+                "ber": "02.57"
+            },
+            {
+                "stasiun": "RAMBIPUJI",
+                "dat": "03.12",
+                "ber": "03.14"
+            },
+            {
+                "stasiun": "JEMBER",
+                "dat": "03.24",
+                "ber": "03.29"
+            },
+            {
+                "stasiun": "KALISETAIL",
+                "dat": "04.48",
+                "ber": "04.50"
+            },
+            {
+                "stasiun": "ROGOJAMPI",
+                "dat": "05.08",
+                "ber": "05.10"
+            },
+            {
+                "stasiun": "BANYUWANGI KOTA",
+                "dat": "05.22",
+                "ber": "05.26"
+            },
+            {
+                "stasiun": "KETAPANG",
+                "dat": "05.40",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Serayu Malam 256–253",
+        "asal": "PASARSENEN",
+        "tujuan": "PURWOKERTO",
+        "jam": "20.10 – 06.44",
+        "rute": [
+            {
+                "stasiun": "PASARSENEN",
+                "dat": "-",
+                "ber": "20.10"
+            },
+            {
+                "stasiun": "CIKAMPEK",
+                "dat": "21.38",
+                "ber": "21.40"
+            },
+            {
+                "stasiun": "KIARACONDONG",
+                "dat": "23.50",
+                "ber": "23.53"
+            },
+            {
+                "stasiun": "LELES",
+                "dat": "00.45",
+                "ber": "00.47"
+            },
+            {
+                "stasiun": "CIPEUNDEUY",
+                "dat": "01.49",
+                "ber": "02.00"
+            },
+            {
+                "stasiun": "TASIKMALAYA",
+                "dat": "03.12",
+                "ber": "03.20"
+            },
+            {
+                "stasiun": "BANJAR",
+                "dat": "04.14",
+                "ber": "04.19"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "05.53",
+                "ber": "06.17"
+            },
+            {
+                "stasiun": "PURWOKERTO",
+                "dat": "06.44",
+                "ber": "-"
+            }
+        ]
+    },
+    {
+        "nama": "KA Serayu Malam 254–255",
+        "asal": "PURWOKERTO",
+        "tujuan": "PASARSENEN",
+        "jam": "16.45 – 04.07",
+        "rute": [
+            {
+                "stasiun": "PURWOKERTO",
+                "dat": "-",
+                "ber": "16.45"
+            },
+            {
+                "stasiun": "KROYA",
+                "dat": "17.12",
+                "ber": "17.37"
+            },
+            {
+                "stasiun": "BANJAR",
+                "dat": "19.13",
+                "ber": "19.18"
+            },
+            {
+                "stasiun": "TASIKMALAYA",
+                "dat": "20.23",
+                "ber": "20.46"
+            },
+            {
+                "stasiun": "CIPEUNDEUY",
+                "dat": "21.50",
+                "ber": "22.00"
+            },
+            {
+                "stasiun": "LELES",
+                "dat": "23.02",
+                "ber": "23.17"
+            },
+            {
+                "stasiun": "KIARACONDONG",
+                "dat": "00.12",
+                "ber": "00.15"
+            },
+            {
+                "stasiun": "CIKAMPEK",
+                "dat": "02.28",
+                "ber": "02.30"
+            },
+            {
+                "stasiun": "PASARSENEN",
+                "dat": "04.07",
+                "ber": "-"
+            }
+        ]
+    }
 ]
-{
-  "nama": "KA Parcel Selatan 286",
-  "asal": "BANDUNG",
-  "tujuan": "SURABAYA KOTA",
-  "jam": "18.25 – 08.23",
-  "rute": [
-    { "stasiun": "BANDUNG", "dat": "-", "ber": "18.25" },
-    { "stasiun": "KIARACONDONG", "dat": "18.35", "ber": "18.45" },
-    { "stasiun": "LELES", "dat": "19.35", "ber": "19.40" },
-    { "stasiun": "CIPENDEUY", "dat": "20.31", "ber": "20.41" },
-    { "stasiun": "TASIKMALAYA", "dat": "21.22", "ber": "21.27" },
-    { "stasiun": "BANJAR", "dat": "22.06", "ber": "22.11" },
-    { "stasiun": "SIDAREJA", "dat": "22.37", "ber": "22.42" },
-    { "stasiun": "KROYA", "dat": "23.33", "ber": "00.13" },
-    { "stasiun": "GOMBONG", "dat": "00.36", "ber": "00.41" },
-    { "stasiun": "KEBUMEN", "dat": "00.58", "ber": "01.03" },
-    { "stasiun": "KUTOARJO", "dat": "01.26", "ber": "01.31" },
-    { "stasiun": "WATES", "dat": "01.57", "ber": "02.01" },
-    { "stasiun": "LEMPUYANGAN", "dat": "02.27", "ber": "03.00" },
-    { "stasiun": "KLATEN", "dat": "03.22", "ber": "03.27" },
-    { "stasiun": "PURWOSARI", "dat": "03.49", "ber": "03.59" },
-    { "stasiun": "SRAGEN", "dat": "04.27", "ber": "04.32" },
-    { "stasiun": "MADIUN", "dat": "05.25", "ber": "05.33" },
-    { "stasiun": "NGANJUK", "dat": "06.12", "ber": "06.17" },
-    { "stasiun": "KERTOSONO", "dat": "06.36", "ber": "06.45" },
-    { "stasiun": "JOMBANG", "dat": "07.00", "ber": "07.06" },
-    { "stasiun": "MOJOKERTO", "dat": "07.28", "ber": "07.38" },
-    { "stasiun": "SURABAYA KOTA", "dat": "08.23", "ber": "-" }
-  ]
-}
-{
-  "nama": "KA Parcel Selatan 285",
-  "asal": "SURABAYA KOTA",
-  "tujuan": "BANDUNG",
-  "jam": "19.00 – 10.31",
-  "rute": [
-    { "stasiun": "SURABAYA KOTA", "dat": "-", "ber": "19.00" },
-    { "stasiun": "MOJOKERTO", "dat": "20.03", "ber": "20.18" },
-    { "stasiun": "JOMBANG", "dat": "20.40", "ber": "21.01" },
-    { "stasiun": "KERTOSONO", "dat": "21.16", "ber": "21.22" },
-    { "stasiun": "NGANJUK", "dat": "21.41", "ber": "21.46" },
-    { "stasiun": "MADIUN", "dat": "22.25", "ber": "22.33" },
-    { "stasiun": "SRAGEN", "dat": "23.26", "ber": "23.31" },
-    { "stasiun": "PURWOSARI", "dat": "23.59", "ber": "00.09" },
-    { "stasiun": "KLATEN", "dat": "00.30", "ber": "00.37" },
-    { "stasiun": "LEMPUYANGAN", "dat": "01.03", "ber": "01.15" },
-    { "stasiun": "WATES", "dat": "01.41", "ber": "01.45" },
-    { "stasiun": "KUTOARJO", "dat": "02.12", "ber": "02.22" },
-    { "stasiun": "KEBUMEN", "dat": "02.45", "ber": "02.52" },
-    { "stasiun": "GOMBONG", "dat": "03.28", "ber": "03.33" },
-    { "stasiun": "KROYA", "dat": "03.59", "ber": "04.14" },
-    { "stasiun": "SIDAREJA", "dat": "05.14", "ber": "05.19" },
-    { "stasiun": "BANJAR", "dat": "05.47", "ber": "05.52" },
-    { "stasiun": "TASIKMALAYA", "dat": "06.38", "ber": "06.48" },
-    { "stasiun": "CIPENDEUY", "dat": "07.33", "ber": "07.43" },
-    { "stasiun": "LELES", "dat": "09.08", "ber": "09.16" },
-    { "stasiun": "KIARACONDONG", "dat": "10.10", "ber": "10.21" },
-    { "stasiun": "BANDUNG", "dat": "10.31", "ber": "-" }
-  ]
-}
-{
-  "nama": "KA Parcel Tengah 282",
-  "asal": "KAMPUNGBANDAN",
-  "tujuan": "MALANG",
-  "jam": "17.40 – 12.01",
-  "rute": [
-    { "stasiun": "KAMPUNGBANDAN", "dat": "-", "ber": "17.40" },
-    { "stasiun": "CIKAMPEK", "dat": "18.56", "ber": "19.01" },
-    { "stasiun": "PEGADEN BARU", "dat": "19.32", "ber": "19.53" },
-    { "stasiun": "JATIBARANG", "dat": "20.34", "ber": "20.59" },
-    { "stasiun": "CIREBON PERUJAKAN", "dat": "21.36", "ber": "21.56" },
-    { "stasiun": "PURWOKERTO", "dat": "23.45", "ber": "23.55" },
-    { "stasiun": "KROYA", "dat": "00.18", "ber": "00.33" },
-    { "stasiun": "GOMBONG", "dat": "00.55", "ber": "01.00" },
-    { "stasiun": "KEBUMEN", "dat": "01.17", "ber": "01.33" },
-    { "stasiun": "KUTOARJO", "dat": "01.56", "ber": "02.15" },
-    { "stasiun": "WATES", "dat": "02.42", "ber": "02.47" },
-    { "stasiun": "LEMPUYANGAN", "dat": "03.13", "ber": "03.32" },
-    { "stasiun": "KLATEN", "dat": "03.53", "ber": "03.57" },
-    { "stasiun": "PURWOSARI", "dat": "04.18", "ber": "04.30" },
-    { "stasiun": "SRAGEN", "dat": "04.57", "ber": "05.20" },
-    { "stasiun": "NGAWI", "dat": "05.56", "ber": "06.01" },
-    { "stasiun": "MADIUN", "dat": "06.24", "ber": "06.33" },
-    { "stasiun": "NGANJUK", "dat": "07.11", "ber": "07.17" },
-    { "stasiun": "KERTOSONO", "dat": "07.37", "ber": "07.50" },
-    { "stasiun": "KEDIRI", "dat": "08.27", "ber": "08.34" },
-    { "stasiun": "TULUNGAGUNG", "dat": "09.00", "ber": "09.07" },
-    { "stasiun": "BLITAR", "dat": "09.48", "ber": "09.54" },
-    { "stasiun": "WLINGI", "dat": "10.27", "ber": "10.37" },
-    { "stasiun": "KEPANJEN", "dat": "11.30", "ber": "11.35" },
-    { "stasiun": "MALANG", "dat": "12.01", "ber": "-" }
-  ]
-}
-{
-  "nama": "KA Parcel Tengah 281",
-  "asal": "MALANG",
-  "tujuan": "JAKARTA GUDANG",
-  "jam": "16.30 – 10.02",
-  "rute": [
-    { "stasiun": "MALANG", "dat": "-", "ber": "16.30" },
-    { "stasiun": "KEPANJEN", "dat": "16.53", "ber": "16.58" },
-    { "stasiun": "WLINGI", "dat": "17.37", "ber": "17.46" },
-    { "stasiun": "BLITAR", "dat": "18.07", "ber": "18.13" },
-    { "stasiun": "TULUNGAGUNG", "dat": "19.01", "ber": "19.06" },
-    { "stasiun": "KEDIRI", "dat": "19.41", "ber": "19.47" },
-    { "stasiun": "KERTOSONO", "dat": "20.46", "ber": "20.53" },
-    { "stasiun": "NGANJUK", "dat": "21.13", "ber": "21.33" },
-    { "stasiun": "MADIUN", "dat": "22.08", "ber": "22.15" },
-    { "stasiun": "NGAWI", "dat": "22.37", "ber": "22.40" },
-    { "stasiun": "SRAGEN", "dat": "23.13", "ber": "23.18" },
-    { "stasiun": "PURWOSARI", "dat": "23.47", "ber": "23.54" },
-    { "stasiun": "KLATEN", "dat": "00.14", "ber": "00.18" },
-    { "stasiun": "LEMPUYANGAN", "dat": "00.39", "ber": "00.54" },
-    { "stasiun": "WATES", "dat": "01.20", "ber": "01.24" },
-    { "stasiun": "KUTOARJO", "dat": "01.50", "ber": "02.00" },
-    { "stasiun": "KEBUMEN", "dat": "02.22", "ber": "02.27" },
-    { "stasiun": "GOMBONG", "dat": "02.43", "ber": "02.48" },
-    { "stasiun": "KROYA", "dat": "03.11", "ber": "03.25" },
-    { "stasiun": "PURWOKERTO", "dat": "03.48", "ber": "05.39" },
-    { "stasiun": "CIREBON PERUJAKAN", "dat": "05.51", "ber": "06.11" },
-    { "stasiun": "JATIBARANG", "dat": "06.47", "ber": "07.01" },
-    { "stasiun": "PEGADEN BARU", "dat": "07.46", "ber": "07.51" },
-    { "stasiun": "CIKAMPEK", "dat": "08.23", "ber": "08.39" },
-    { "stasiun": "JAKARTA GUDANG", "dat": "10.02", "ber": "-" }
-  ]
-}
-{
-  "nama": "KA Wijayakusuma 118–119",
-  "asal": "KETAPANG",
-  "tujuan": "CILACAP",
-  "jam": "11.00 – 01.11",
-  "rute": [
-    { "stasiun": "KETAPANG", "dat": "-", "ber": "11.00" },
-    { "stasiun": "BANYUWANGI KOTA", "dat": "11.13", "ber": "11.15" },
-    { "stasiun": "ROGOJAMPI", "dat": "11.27", "ber": "11.29" },
-    { "stasiun": "KALISETAIL", "dat": "11.48", "ber": "11.50" },
-    { "stasiun": "JEMBER", "dat": "13.13", "ber": "13.18" },
-    { "stasiun": "RAMBIPUJI", "dat": "13.28", "ber": "13.30" },
-    { "stasiun": "TANGGUL", "dat": "13.45", "ber": "13.47" },
-    { "stasiun": "KLAKAH", "dat": "14.15", "ber": "14.17" },
-    { "stasiun": "PROBOLINGGO", "dat": "14.49", "ber": "14.54" },
-    { "stasiun": "PASURUAN", "dat": "15.25", "ber": "15.27" },
-    { "stasiun": "BANGIL", "dat": "15.45", "ber": "15.52" },
-    { "stasiun": "SIDOARJO", "dat": "16.17", "ber": "16.21" },
-    { "stasiun": "SURABAYA GUBENG", "dat": "16.53", "ber": "17.20" },
-    { "stasiun": "MOJOKERTO", "dat": "17.56", "ber": "17.58" },
-    { "stasiun": "JOMBANG", "dat": "18.18", "ber": "18.20" },
-    { "stasiun": "KERTOSONO", "dat": "18.34", "ber": "18.36" },
-    { "stasiun": "NGANJUK", "dat": "18.55", "ber": "18.57" },
-    { "stasiun": "MADIUN", "dat": "19.33", "ber": "19.38" },
-    { "stasiun": "NGAWI", "dat": "20.01", "ber": "20.18" },
-    { "stasiun": "SRAGEN", "dat": "20.51", "ber": "20.53" },
-    { "stasiun": "SOLO BALAPAN", "dat": "21.16", "ber": "21.19" },
-    { "stasiun": "KLATEN", "dat": "21.42", "ber": "21.56" },
-    { "stasiun": "YOGYAKARTA", "dat": "22.20", "ber": "22.25" },
-    { "stasiun": "WATES", "dat": "22.49", "ber": "22.51" },
-    { "stasiun": "KUTOARJO", "dat": "23.17", "ber": "23.20" },
-    { "stasiun": "KEBUMEN", "dat": "23.41", "ber": "23.43" },
-    { "stasiun": "GOMBONG", "dat": "23.59", "ber": "00.01" },
-    { "stasiun": "KROYA", "dat": "00.23", "ber": "00.25" },
-    { "stasiun": "MAOS", "dat": "00.44", "ber": "00.46" },
-    { "stasiun": "CILACAP", "dat": "01.11", "ber": "-" }
-  ]
-}
-{
-  "nama": "KA Wijayakusuma 120–117",
-  "asal": "CILACAP",
-  "tujuan": "KETAPANG",
-  "jam": "15.20 – 05.40",
-  "rute": [
-    { "stasiun": "CILACAP", "dat": "-", "ber": "15.20" },
-    { "stasiun": "MAOS", "dat": "15.52", "ber": "15.54" },
-    { "stasiun": "KROYA", "dat": "16.07", "ber": "16.10" },
-    { "stasiun": "GOMBONG", "dat": "16.38", "ber": "16.40" },
-    { "stasiun": "KEBUMEN", "dat": "17.02", "ber": "17.04" },
-    { "stasiun": "KUTOARJO", "dat": "17.27", "ber": "17.32" },
-    { "stasiun": "WATES", "dat": "17.58", "ber": "18.00" },
-    { "stasiun": "YOGYAKARTA", "dat": "18.23", "ber": "18.31" },
-    { "stasiun": "KLATEN", "dat": "18.56", "ber": "18.58" },
-    { "stasiun": "SOLO BALAPAN", "dat": "19.24", "ber": "19.28" },
-    { "stasiun": "SRAGEN", "dat": "19.51", "ber": "19.53" },
-    { "stasiun": "NGAWI", "dat": "20.24", "ber": "20.26" },
-    { "stasiun": "MADIUN", "dat": "20.48", "ber": "20.53" },
-    { "stasiun": "NGANJUK", "dat": "21.29", "ber": "21.31" },
-    { "stasiun": "KERTOSONO", "dat": "21.51", "ber": "21.54" },
-    { "stasiun": "JOMBANG", "dat": "22.08", "ber": "22.11" },
-    { "stasiun": "MOJOKERTO", "dat": "22.33", "ber": "22.35" },
-    { "stasiun": "SURABAYA GUBENG", "dat": "23.18", "ber": "23.48" },
-    { "stasiun": "SIDOARJO", "dat": "00.17", "ber": "00.20" },
-    { "stasiun": "BANGIL", "dat": "00.44", "ber": "00.53" },
-    { "stasiun": "PASURUAN", "dat": "01.11", "ber": "01.13" },
-    { "stasiun": "PROBOLINGGO", "dat": "01.45", "ber": "01.55" },
-    { "stasiun": "KLAKAH", "dat": "02.25", "ber": "02.27" },
-    { "stasiun": "TANGGUL", "dat": "02.55", "ber": "02.57" },
-    { "stasiun": "RAMBIPUJI", "dat": "03.12", "ber": "03.14" },
-    { "stasiun": "JEMBER", "dat": "03.24", "ber": "03.29" },
-    { "stasiun": "KALISETAIL", "dat": "04.48", "ber": "04.50" },
-    { "stasiun": "ROGOJAMPI", "dat": "05.08", "ber": "05.10" },
-    { "stasiun": "BANYUWANGI KOTA", "dat": "05.22", "ber": "05.26" },
-    { "stasiun": "KETAPANG", "dat": "05.40", "ber": "-" }
-  ]
-}
-{
-  "nama": "KA Serayu Malam 256–253",
-  "asal": "PASARSENEN",
-  "tujuan": "PURWOKERTO",
-  "jam": "20.10 – 06.44",
-  "rute": [
-    { "stasiun": "PASARSENEN", "dat": "-", "ber": "20.10" },
-    { "stasiun": "CIKAMPEK", "dat": "21.38", "ber": "21.40" },
-    { "stasiun": "KIARACONDONG", "dat": "23.50", "ber": "23.53" },
-    { "stasiun": "LELES", "dat": "00.45", "ber": "00.47" },
-    { "stasiun": "CIPEUNDEUY", "dat": "01.49", "ber": "02.00" },
-    { "stasiun": "TASIKMALAYA", "dat": "03.12", "ber": "03.20" },
-    { "stasiun": "BANJAR", "dat": "04.14", "ber": "04.19" },
-    { "stasiun": "KROYA", "dat": "05.53", "ber": "06.17" },
-    { "stasiun": "PURWOKERTO", "dat": "06.44", "ber": "-" }
-  ]
-}
-{
-  "nama": "KA Serayu Malam 254–255",
-  "asal": "PURWOKERTO",
-  "tujuan": "PASARSENEN",
-  "jam": "16.45 – 04.07",
-  "rute": [
-    { "stasiun": "PURWOKERTO", "dat": "-", "ber": "16.45" },
-    { "stasiun": "KROYA", "dat": "17.12", "ber": "17.37" },
-    { "stasiun": "BANJAR", "dat": "19.13", "ber": "19.18" },
-    { "stasiun": "TASIKMALAYA", "dat": "20.23", "ber": "20.46" },
-    { "stasiun": "CIPEUNDEUY", "dat": "21.50", "ber": "22.00" },
-    { "stasiun": "LELES", "dat": "23.02", "ber": "23.17" },
-    { "stasiun": "KIARACONDONG", "dat": "00.12", "ber": "00.15" },
-    { "stasiun": "CIKAMPEK", "dat": "02.28", "ber": "02.30" },
-    { "stasiun": "PASARSENEN", "dat": "04.07", "ber": "-" }
-  ]
-}
