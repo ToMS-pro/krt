@@ -103,6 +103,39 @@
   ]
 }
 {
+  "nama": "KA Parcel Tengah 282",
+  "asal": "KAMPUNGBANDAN",
+  "tujuan": "MALANG",
+  "jam": "17.40 – 12.01",
+  "rute": [
+    { "stasiun": "KAMPUNGBANDAN", "dat": "-", "ber": "17.40" },
+    { "stasiun": "CIKAMPEK", "dat": "18.56", "ber": "19.01" },
+    { "stasiun": "PEGADEN BARU", "dat": "19.32", "ber": "19.53" },
+    { "stasiun": "JATIBARANG", "dat": "20.34", "ber": "20.59" },
+    { "stasiun": "CIREBON PERUJAKAN", "dat": "21.36", "ber": "21.56" },
+    { "stasiun": "PURWOKERTO", "dat": "23.45", "ber": "23.55" },
+    { "stasiun": "KROYA", "dat": "00.18", "ber": "00.33" },
+    { "stasiun": "GOMBONG", "dat": "00.55", "ber": "01.00" },
+    { "stasiun": "KEBUMEN", "dat": "01.17", "ber": "01.33" },
+    { "stasiun": "KUTOARJO", "dat": "01.56", "ber": "02.15" },
+    { "stasiun": "WATES", "dat": "02.42", "ber": "02.47" },
+    { "stasiun": "LEMPUYANGAN", "dat": "03.13", "ber": "03.32" },
+    { "stasiun": "KLATEN", "dat": "03.53", "ber": "03.57" },
+    { "stasiun": "PURWOSARI", "dat": "04.18", "ber": "04.30" },
+    { "stasiun": "SRAGEN", "dat": "04.57", "ber": "05.20" },
+    { "stasiun": "NGAWI", "dat": "05.56", "ber": "06.01" },
+    { "stasiun": "MADIUN", "dat": "06.24", "ber": "06.33" },
+    { "stasiun": "NGANJUK", "dat": "07.11", "ber": "07.17" },
+    { "stasiun": "KERTOSONO", "dat": "07.37", "ber": "07.50" },
+    { "stasiun": "KEDIRI", "dat": "08.27", "ber": "08.34" },
+    { "stasiun": "TULUNGAGUNG", "dat": "09.00", "ber": "09.07" },
+    { "stasiun": "BLITAR", "dat": "09.48", "ber": "09.54" },
+    { "stasiun": "WLINGI", "dat": "10.27", "ber": "10.37" },
+    { "stasiun": "KEPANJEN", "dat": "11.30", "ber": "11.35" },
+    { "stasiun": "MALANG", "dat": "12.01", "ber": "-" }
+  ]
+}
+{
   "nama": "KA Parcel Tengah 281",
   "asal": "MALANG",
   "tujuan": "JAKARTA GUDANG",
