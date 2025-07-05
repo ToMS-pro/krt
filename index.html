@@ -2,35 +2,30 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Filter Kereta per Stasiun</title>
+  <title>Cari Kereta dari A ke B</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    select { width: 100%; padding: 8px; margin-top: 10px; }
+    body { font-family: sans-serif; padding: 20px; }
+    select, button { padding: 8px; margin-top: 10px; width: 100%; }
     table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th, td { padding: 8px; border: 1px solid #ccc; }
   </style>
 </head>
 <body>
-  <h2>Cari KA Berdasarkan Stasiun Awal & Tujuan</h2>
+  <h2>Cari Kereta: Stasiun Awal → Tujuan</h2>
 
-  <label>Pilih Stasiun Awal:</label>
-  <select id="stasiunAwal">
-    <option value="">-- Pilih Stasiun Awal --</option>
-  </select>
+  <label>Stasiun Awal:</label>
+  <select id="stasiunAwal"><option value="">-- Pilih --</option></select>
 
-  <label>Pilih Stasiun Tujuan:</label>
-  <select id="stasiunTujuan" disabled>
-    <option value="">-- Pilih Stasiun Tujuan --</option>
-  </select>
+  <label>Stasiun Tujuan:</label>
+  <select id="stasiunTujuan"><option value="">-- Pilih --</option></select>
 
-  <table id="hasilTabel" style="display: none;">
+  <table id="hasil" style="display: none;">
     <thead>
       <tr>
-        <th>KA</th>
-        <th>Asal → Tujuan</th>
-        <th>Jam</th>
-        <th>Stasiun Awal (Dat/Ber)</th>
-        <th>Stasiun Tujuan (Dat/Ber)</th>
+        <th>Nama KA</th>
+        <th>Rute</th>
+        <th>Berangkat dari Awal</th>
+        <th>Tiba di Tujuan</th>
       </tr>
     </thead>
     <tbody></tbody>
@@ -38,7 +33,12 @@
 
   <script>
     let dataKereta = [];
+    const awal = document.getElementById('stasiunAwal');
+    const tujuan = document.getElementById('stasiunTujuan');
+    const tbody = document.querySelector('tbody');
+    const hasil = document.getElementById('hasil');
 
+    // Ambil data.json
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
@@ -46,68 +46,54 @@
         isiDropdownStasiun();
       });
 
-    const awal = document.getElementById('stasiunAwal');
-    const tujuan = document.getElementById('stasiunTujuan');
-    const tabel = document.getElementById('hasilTabel');
-    const tbody = tabel.querySelector('tbody');
-
     function isiDropdownStasiun() {
-      const semuaStasiun = new Set();
-      dataKereta.forEach(ka => {
-        ka.rute.forEach(r => semuaStasiun.add(r.stasiun));
-      });
-
-      const list = Array.from(semuaStasiun).sort();
+      const semua = new Set();
+      dataKereta.forEach(ka => ka.rute.forEach(r => semua.add(r.stasiun)));
+      const list = Array.from(semua).sort();
       list.forEach(nama => {
-        const opt = document.createElement('option');
-        opt.value = nama;
-        opt.textContent = nama;
-        awal.appendChild(opt.cloneNode(true));
-        tujuan.appendChild(opt.cloneNode(true));
+        awal.innerHTML += `<option value="${nama}">${nama}</option>`;
+        tujuan.innerHTML += `<option value="${nama}">${nama}</option>`;
       });
     }
 
-    awal.addEventListener('change', () => {
-      tujuan.disabled = awal.value === "";
-    });
+    tujuan.addEventListener('change', tampilkanHasil);
+    awal.addEventListener('change', tampilkanHasil);
 
-    tujuan.addEventListener('change', () => {
-      const asal = awal.value;
-      const tujuanSt = tujuan.value;
+    function tampilkanHasil() {
+      const dari = awal.value;
+      const ke = tujuan.value;
+      tbody.innerHTML = '';
+      hasil.style.display = 'none';
 
-      tbody.innerHTML = "";
-      tabel.style.display = "none";
-      if (asal === "" || tujuanSt === "") return;
+      if (!dari || !ke || dari === ke) return;
 
-      const hasil = dataKereta.filter(ka => {
-        const rute = ka.rute.map(r => r.stasiun);
-        const idxAwal = rute.indexOf(asal);
-        const idxTujuan = rute.indexOf(tujuanSt);
+      const cocok = dataKereta.filter(ka => {
+        const stasiunList = ka.rute.map(r => r.stasiun);
+        const idxAwal = stasiunList.indexOf(dari);
+        const idxTujuan = stasiunList.indexOf(ke);
         return idxAwal !== -1 && idxTujuan !== -1 && idxAwal < idxTujuan;
       });
 
-      if (hasil.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5">Tidak ada KA yang cocok.</td></tr>`;
-        tabel.style.display = "table";
-        return;
+      if (cocok.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="4">Tidak ditemukan KA yang sesuai.</td></tr>`;
+      } else {
+        cocok.forEach(ka => {
+          const infoAwal = ka.rute.find(r => r.stasiun === dari);
+          const infoTujuan = ka.rute.find(r => r.stasiun === ke);
+          const row = `
+            <tr>
+              <td>${ka.nama}</td>
+              <td>${ka.asal} → ${ka.tujuan}</td>
+              <td>${infoAwal.ber}</td>
+              <td>${infoTujuan.dat}</td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        });
       }
 
-      hasil.forEach(ka => {
-        const rAwal = ka.rute.find(r => r.stasiun === asal);
-        const rTujuan = ka.rute.find(r => r.stasiun === tujuanSt);
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td>${ka.nama}</td>
-          <td>${ka.asal} → ${ka.tujuan}</td>
-          <td>${ka.jam}</td>
-          <td>${rAwal.dat} / ${rAwal.ber}</td>
-          <td>${rTujuan.dat} / ${rTujuan.ber}</td>
-        `;
-        tbody.appendChild(tr);
-      });
-
-      tabel.style.display = "table";
-    });
+      hasil.style.display = 'table';
+    }
   </script>
 </body>
 </html>
