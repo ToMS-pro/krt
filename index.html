@@ -1,80 +1,51 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Jadwal KA Parcel</title>
+  <title>Input Jadwal KA</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    select, button { padding: 6px; margin: 5px; }
-    table { border-collapse: collapse; width: 100%; margin-top: 15px; }
-    th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+    body { font-family: Arial; padding: 20px; }
+    input, textarea { width: 100%; margin-bottom: 10px; padding: 5px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #999; padding: 5px; text-align: left; }
   </style>
 </head>
 <body>
-  <h1>Jadwal KA Parcel</h1>
+  <h2>Input Jadwal KA</h2>
+  <input type="text" id="nama" placeholder="Nama Kereta">
+  <input type="text" id="asal" placeholder="Stasiun Asal">
+  <input type="text" id="tujuan" placeholder="Stasiun Tujuan">
+  <input type="text" id="jam" placeholder="Jam (misal: 19.00 – 09.11)">
 
-  <label for="asal">Stasiun Asal:</label>
-  <select id="asal"></select>
+  <textarea id="rute" rows="10" placeholder='Tulis rute format: 
+Stasiun,Datang,Berangkat
+Contoh:
+CIREBON,05.06,05.28
+...'></textarea>
 
-  <label for="tujuan">Stasiun Tujuan:</label>
-  <select id="tujuan"></select>
-
-  <button onclick="cariJadwal()">Cari Jadwal</button>
+  <button onclick="tampilkan()">Tampilkan Jadwal</button>
 
   <div id="hasil"></div>
 
   <script>
-    let dataKereta = [];
-    let semuaStasiun = new Set();
+    function tampilkan() {
+      const nama = document.getElementById("nama").value;
+      const asal = document.getElementById("asal").value;
+      const tujuan = document.getElementById("tujuan").value;
+      const jam = document.getElementById("jam").value;
+      const ruteText = document.getElementById("rute").value.trim();
 
-    async function loadData() {
-      const res = await fetch('data.json');
-      dataKereta = await res.json();
+      let html = `<h3>${nama}</h3><p><strong>Asal:</strong> ${asal} &rarr; <strong>Tujuan:</strong> ${tujuan}</p><p><strong>Jam:</strong> ${jam}</p>`;
+      html += `<table><thead><tr><th>Stasiun</th><th>Datang</th><th>Berangkat</th></tr></thead><tbody>`;
 
-      // Ambil semua nama stasiun
-      dataKereta.forEach(kereta => {
-        kereta.rute.forEach(r => semuaStasiun.add(r.stasiun));
+      const baris = ruteText.split("\n");
+      baris.forEach(line => {
+        const [st, dat, ber] = line.split(",");
+        html += `<tr><td>${st}</td><td>${dat || '-'}</td><td>${ber || '-'}</td></tr>`;
       });
 
-      const asal = document.getElementById('asal');
-      const tujuan = document.getElementById('tujuan');
-      Array.from(semuaStasiun).sort().forEach(st => {
-        asal.innerHTML += `<option value="${st}">${st}</option>`;
-        tujuan.innerHTML += `<option value="${st}">${st}</option>`;
-      });
+      html += "</tbody></table>";
+      document.getElementById("hasil").innerHTML = html;
     }
-
-    function cariJadwal() {
-      const asal = document.getElementById('asal').value;
-      const tujuan = document.getElementById('tujuan').value;
-      const hasilDiv = document.getElementById('hasil');
-      hasilDiv.innerHTML = '';
-
-      const hasil = dataKereta.filter(kereta => {
-        const rute = kereta.rute.map(r => r.stasiun);
-        return rute.includes(asal) && rute.includes(tujuan) &&
-               rute.indexOf(asal) < rute.indexOf(tujuan);
-      });
-
-      if (hasil.length === 0) {
-        hasilDiv.innerHTML = '<p><strong>Tidak ada jadwal ditemukan.</strong></p>';
-        return;
-      }
-
-      hasilDiv.innerHTML = hasil.map(kereta => {
-        const rute = kereta.rute;
-        const jamBerangkat = rute.find(r => r.stasiun === asal)?.ber || '-';
-        const jamTiba = rute.find(r => r.stasiun === tujuan)?.dat || '-';
-        return `
-          <h2>${kereta.nama}</h2>
-          <p><strong>Rute:</strong> ${kereta.asal} → ${kereta.tujuan}</p>
-          <p><strong>Berangkat dari ${asal}:</strong> ${jamBerangkat}</p>
-          <p><strong>Tiba di ${tujuan}:</strong> ${jamTiba}</p>
-        `;
-      }).join('<hr>');
-    }
-
-    loadData();
   </script>
 </body>
 </html>
